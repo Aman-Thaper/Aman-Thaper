@@ -23,15 +23,7 @@ An intelligent chatbot assistant for the Talenticks HRM platform that helps user
 ## 🎵 Spotify
 [![Spotify](https://spotify-github-profile.vercel.app/api/view?uid=31tjfcbwg62vdoadmky46xxd62j4&cover_image=true&theme=dark&show_offline=false&background_color=1a1a1a&interchange=false&bar_color=8b5cf6&bar_color_cover=false)](https://open.spotify.com/user/31tjfcbwg62vdoadmky46xxd62j4)
 
-## 🤝 Connect with Me
-- [LinkedIn](https://www.linkedin.com/in/aman-thaper04)
-- [Email](mailto:work.aman04@gmail.com)
-- [GitHub](https://github.com/Aman-Thaper)
 
-## 📫 How to Reach Me
-- Email: work.aman04@gmail.com
-- LinkedIn: [Aman Thaper](https://www.linkedin.com/in/aman-thaper04)
-- GitHub: [@Aman-Thaper](https://github.com/Aman-Thaper)
 
 ## 🎯 Current Focus
 - Enhancing AI capabilities in web applications
