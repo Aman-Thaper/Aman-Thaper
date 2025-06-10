@@ -1,7 +1,5 @@
 # 👋 Hi there, I'm Aman Thaper!
 
-## 🚀 About Me
-I'm a passionate software developer with a keen interest in building innovative solutions. Currently working on AI-powered applications and web development projects.
 
 ## 💻 Tech Stack
 - **Languages:** JavaScript, Python, Java
