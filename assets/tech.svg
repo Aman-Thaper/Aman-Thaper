@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="322" viewBox="0 0 860 322" role="img" aria-label="Tech I build with">
+<style>.t{font:600 16px 'Segoe UI',Ubuntu,Sans-Serif}.l{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif}.v{font:600 13px 'Segoe UI',Ubuntu,Sans-Serif}.s{font:400 11px 'Segoe UI',Ubuntu,Sans-Serif}.p{font:600 12px 'Segoe UI',Ubuntu,Sans-Serif}</style>
+<rect x="0.5" y="0.5" width="859" height="321" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<text class="t" x="25" y="33" fill="#7c3aed">Tech I build with</text>
+<line x1="25" y1="45" x2="835" y2="45" stroke="#d0d7de"/>
+<text class="s" x="25" y="76" fill="#8c959f" letter-spacing="0.6">LANGUAGES</text>
+<rect x="25" y="98" width="67" height="24" rx="12" fill="#3776AB" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="58.5" y="114" text-anchor="middle" fill="#ffffff">Python</text>
+<rect x="99" y="98" width="95" height="24" rx="12" fill="#F7DF1E" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="146.5" y="114" text-anchor="middle" fill="#000000">JavaScript</text>
+<rect x="201" y="98" width="95" height="24" rx="12" fill="#3178C6" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="248.5" y="114" text-anchor="middle" fill="#ffffff">TypeScript</text>
+<rect x="303" y="98" width="53" height="24" rx="12" fill="#ED8B00" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="329.5" y="114" text-anchor="middle" fill="#000000">Java</text>
+<rect x="363" y="98" width="32" height="24" rx="12" fill="#00599C" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="379.0" y="114" text-anchor="middle" fill="#ffffff">C</text>
+<text class="s" x="25" y="140" fill="#8c959f" letter-spacing="0.6">FRONTEND</text>
+<rect x="25" y="162" width="60" height="24" rx="12" fill="#61DAFB" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="55.0" y="178" text-anchor="middle" fill="#000000">React</text>
+<rect x="92" y="162" width="74" height="24" rx="12" fill="#111111" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="129.0" y="178" text-anchor="middle" fill="#ffffff">Next.js</text>
+<rect x="173" y="162" width="108" height="24" rx="12" fill="#06B6D4" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="227.0" y="178" text-anchor="middle" fill="#ffffff">Tailwind CSS</text>
+<rect x="288" y="162" width="60" height="24" rx="12" fill="#E34F26" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="318.0" y="178" text-anchor="middle" fill="#ffffff">HTML5</text>
+<rect x="355" y="162" width="53" height="24" rx="12" fill="#1572B6" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="381.5" y="178" text-anchor="middle" fill="#ffffff">CSS3</text>
+<text class="s" x="25" y="204" fill="#8c959f" letter-spacing="0.6">BACKEND &amp; DATA</text>
+<rect x="25" y="226" width="74" height="24" rx="12" fill="#009688" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="62.0" y="242" text-anchor="middle" fill="#ffffff">FastAPI</text>
+<rect x="106" y="226" width="74" height="24" rx="12" fill="#339933" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="143.0" y="242" text-anchor="middle" fill="#ffffff">Node.js</text>
+<rect x="187" y="226" width="74" height="24" rx="12" fill="#4b5563" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="224.0" y="242" text-anchor="middle" fill="#ffffff">Express</text>
+<rect x="268" y="226" width="95" height="24" rx="12" fill="#D71F00" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="315.5" y="242" text-anchor="middle" fill="#ffffff">SQLAlchemy</text>
+<rect x="370" y="226" width="74" height="24" rx="12" fill="#47A248" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="407.0" y="242" text-anchor="middle" fill="#ffffff">MongoDB</text>
+<rect x="451" y="226" width="60" height="24" rx="12" fill="#4479A1" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="481.0" y="242" text-anchor="middle" fill="#ffffff">MySQL</text>
+<text class="s" x="25" y="268" fill="#8c959f" letter-spacing="0.6">AI &amp; TOOLING</text>
+<rect x="25" y="290" width="67" height="24" rx="12" fill="#412991" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="58.5" y="306" text-anchor="middle" fill="#ffffff">OpenAI</text>
+<rect x="99" y="290" width="95" height="24" rx="12" fill="#FF6F00" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="146.5" y="306" text-anchor="middle" fill="#ffffff">TensorFlow</text>
+<rect x="201" y="290" width="67" height="24" rx="12" fill="#5C3EE8" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="234.5" y="306" text-anchor="middle" fill="#ffffff">OpenCV</text>
+<rect x="275" y="290" width="67" height="24" rx="12" fill="#2496ED" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="308.5" y="306" text-anchor="middle" fill="#ffffff">Docker</text>
+<rect x="349" y="290" width="46" height="24" rx="12" fill="#F05032" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="372.0" y="306" text-anchor="middle" fill="#ffffff">Git</text>
+<rect x="402" y="290" width="122" height="24" rx="12" fill="#2088FF" stroke="#d0d7de" stroke-width="0.5"/>
+<text class="p" x="463.0" y="306" text-anchor="middle" fill="#ffffff">GitHub Actions</text>
+</svg>
