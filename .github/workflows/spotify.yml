@@ -1,0 +1,63 @@
+# Refreshes the Spotify card and publishes it to a dedicated branch.
+#
+# The card is published to `spotify-card` rather than committed to main: at
+# this cadence it would otherwise bury the main branch's history under bot
+# commits. The branch is force-pushed each run, so it stays a single commit.
+name: Spotify card
+
+on:
+  schedule:
+    # GitHub's scheduler is best-effort and runs late under load, which is why
+    # the card distinguishes "now playing" from "last played" rather than
+    # claiming to be live.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: spotify
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render the card
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: python .github/scripts/spotify_card.py
+
+      - name: Publish to the spotify-card branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # The renderer leaves the files untouched when a refresh fails, so a
+          # missing file here means there is nothing new worth publishing.
+          if [ ! -f assets/spotify.svg ]; then
+            echo "no card produced; nothing to publish"
+            exit 0
+          fi
+          publish=$(mktemp -d)
+          cp assets/spotify.svg assets/spotify-dark.svg "$publish"/
+          cd "$publish"
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b spotify-card
+          git add .
+          git commit -qm "Spotify card $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push -q -f \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            spotify-card
+          echo "published to spotify-card"

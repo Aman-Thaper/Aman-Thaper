@@ -149,10 +149,14 @@ Where I work through JavaScript fundamentals in public. Unpolished on purpose.
 <div align="center">
 
 <a href="https://open.spotify.com/user/31tjfcbwg62vdoadmky46xxd62j4">
-  <img src="https://spotify-github-profile.vercel.app/api/view?uid=31tjfcbwg62vdoadmky46xxd62j4&cover_image=true&theme=novatorem&show_offline=true&background_color=0d1117&bar_color=8b5cf6&bar_color_cover=false" alt="Spotify — now playing" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aman-Thaper/Aman-Thaper/spotify-card/spotify-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aman-Thaper/Aman-Thaper/spotify-card/spotify.svg" />
+    <img src="https://raw.githubusercontent.com/Aman-Thaper/Aman-Thaper/spotify-card/spotify.svg" alt="What I'm listening to on Spotify" />
+  </picture>
 </a>
 
-<sub>The one widget here that needs a live third-party service. If it's blank, I'm probably compiling something.</sub>
+<sub>Rendered by <a href="/.github/workflows/spotify.yml">a workflow in this repo</a> and served from GitHub — no third-party widget host.</sub>
 
 </div>
 
