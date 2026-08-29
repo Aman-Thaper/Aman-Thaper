@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="151" viewBox="0 0 440 151" role="img" aria-label="Aman Thaper — GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="124" viewBox="0 0 440 124" role="img" aria-label="Aman Thaper — GitHub">
 <style>.t{font:600 16px 'Segoe UI',Ubuntu,Sans-Serif}.l{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif}.v{font:600 13px 'Segoe UI',Ubuntu,Sans-Serif}.s{font:400 11px 'Segoe UI',Ubuntu,Sans-Serif}.p{font:600 12px 'Segoe UI',Ubuntu,Sans-Serif}</style>
-<rect x="0.5" y="0.5" width="439" height="150" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="0.5" y="0.5" width="439" height="123" rx="10" fill="#ffffff" stroke="#d0d7de"/>
 <text class="t" x="25" y="33" fill="#7c3aed">Aman Thaper — GitHub</text>
 <line x1="25" y1="45" x2="415" y2="45" stroke="#d0d7de"/>
 <text class="l" x="25" y="70" fill="#57606a">Public repositories</text>
 <text class="v" x="415" y="70" text-anchor="end" fill="#1f2328">7</text>
 <text class="l" x="25" y="97" fill="#57606a">Followers</text>
 <text class="v" x="415" y="97" text-anchor="end" fill="#1f2328">16</text>
-<text class="l" x="25" y="124" fill="#57606a">Current streak</text>
-<text class="v" x="415" y="124" text-anchor="end" fill="#1f2328">3 days</text>
 </svg>
