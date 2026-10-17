@@ -1,69 +1,73 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:e62429,100:1b3a8c&height=220&section=header&text=YOUR%20NAME&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=your%20friendly%20neighborhood%20developer&descAlignY=58&descSize=20" width="100%" />
+<img src="assets/header.svg" alt="Aman Thaper — your friendly neighborhood developer" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=E62429&center=true&vCenter=true&width=600&lines=Swinging+through+code+%F0%9F%95%B8%EF%B8%8F;Catching+bugs+in+my+web+%F0%9F%95%B7%EF%B8%8F;Building+things+that+stick+%F0%9F%9A%80" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2600&pause=900&color=FF3B3F&center=true&vCenter=true&width=640&lines=%3E+spinning+up+a+new+web...;%3E+catching+bugs+mid-air+%F0%9F%95%B7%EF%B8%8F;%3E+with+great+code+comes+great+refactoring;%3E+npm+install+--save+web-fluid" alt="typing" />
 
 <br/>
 
-![Web Swinger](https://img.shields.io/badge/status-swinging-e62429?style=for-the-badge&logo=github&logoColor=white)
-![Spidey Sense](https://img.shields.io/badge/spidey%20sense-tingling-1b3a8c?style=for-the-badge)
-![Coffee](https://img.shields.io/badge/fuel-coffee%20%26%20pizza-e62429?style=for-the-badge&logo=buymeacoffee&logoColor=white)
+![status](https://img.shields.io/badge/status-on%20patrol-ff3b3f?style=for-the-badge&logo=github&logoColor=white)
+![spidey sense](https://img.shields.io/badge/spidey%20sense-tingling-3b82f6?style=for-the-badge)
+![last night](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAman-Thaper%2FAman-Thaper%2Fmain%2Fdata%2Fsleep-badge.json&style=for-the-badge)
+![profile views](https://komarev.com/ghpvc/?username=Aman-Thaper&style=for-the-badge&color=1b3a8c&label=citizens%20saved)
 
 </div>
 
----
+<img src="assets/crawler.svg" width="100%" alt="" />
 
-## 🕸️ The Origin Story
+## 🕸️ Origin story
 
-```text
-        |
-        |
-        |
-       .-.
-    \\ (o o) //
-     \\\| |///
-    ~~~'^^^'~~~
-     /  / \  \
-    /__/   \__\
+```console
+$ cat /var/log/origin.log
 
- > bitten by a radioactive bug...
- > ...and it turned out to be a feature, not a bug.
+[00:00:01]  bitten by a radioactive bug in production
+[00:00:02]  wait. it's a feature.
+[00:00:03]  acquired: wall-crawling, web-slinging, chronic 2am commits
+[00:00:04]  responsibility level: great (see: power)
+[00:00:05]  sleep: being tracked live below. it's not going well.
 ```
 
-I'm **YOUR NAME** — a developer who spends the day building cool stuff and the night
-debugging it. Careful with that deploy button, my spider-sense is tingling.
+<img src="assets/crawler-reverse.svg" width="100%" alt="" />
 
----
+## 🕷️ Suit specs
 
-## 🕷️ Suit Specs
-
-| 🕸️ Ability | ⚡ Level |
+| 🕸️ ability | ⚡ level |
 |---|---|
-| **Web-slinging (APIs)** | `██████████` 100% |
-| **Wall-crawling (Frontend)** | `█████████░` 90% |
-| **Spidey Sense (Debugging)** | `████████░░` 80% |
+| **Web-slinging** (APIs) | `██████████` 100% |
+| **Wall-crawling** (frontend) | `█████████░` 90% |
+| **Spidey sense** (debugging) | `████████░░` 80% |
 | **Quips under pressure** | `██████████` 100% |
-| **Sleep** | `██░░░░░░░░` 20% |
+| **Sleep** | 👇 not a guess anymore, it's live |
 
----
+## 🌙 Night patrol — live sleep tracker
 
-## 🛠️ Web Shooters (Tech Arsenal)
+<div align="center">
+
+<img src="assets/sleep.svg" width="100%" alt="Live sleep tracker: each night hangs as a strand of web, longer strand = more sleep" />
+
+<sub>Logged automatically from my phone every morning. Each strand is a night; the longer it hangs, the more I slept.</sub>
+
+</div>
+
+<img src="assets/crawler.svg" width="100%" alt="" />
+
+## 🛠️ Web shooters
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-1b3a8c?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-e62429?style=for-the-badge&logo=javascript&logoColor=white)
-![React](https://img.shields.io/badge/React-1b3a8c?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-1b3a8c?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-e62429?style=for-the-badge&logo=react&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-1b3a8c?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-e62429?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-1b3a8c?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-e62429?style=for-the-badge&logo=git&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-1b3a8c?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-e62429?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-1b3a8c?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
 
----
-
-## 🏙️ Missions (Projects)
+## 🏙️ Missions
 
 <table>
 <tr>
@@ -78,7 +82,7 @@ A short description of your coolest project. What it does, why it's awesome.
 <td width="50%" valign="top">
 
 ### 🕷️ Mission: Beta
-Another project that deserves a spot in the city skyline.
+Another project that deserves a spot on the skyline.
 
 `Tech` `Stack` `Here`
 
@@ -88,7 +92,7 @@ Another project that deserves a spot in the city skyline.
 <td width="50%" valign="top">
 
 ### 🌆 Mission: Gamma
-Something you're proud of, or something still in progress.
+Something you're proud of, or still building.
 
 `Tech` `Stack` `Here`
 
@@ -96,7 +100,7 @@ Something you're proud of, or something still in progress.
 <td width="50%" valign="top">
 
 ### 🏗️ Mission: Delta
-Your experimental side project. Unpolished is fine.
+The experimental one. Unpolished is fine.
 
 `Tech` `Stack` `Here`
 
@@ -104,31 +108,39 @@ Your experimental side project. Unpolished is fine.
 </tr>
 </table>
 
----
+<img src="assets/crawler-reverse.svg" width="100%" alt="" />
 
-## 📊 City Watch (Stats)
+## 📊 City watch
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&hide_border=true&bg_color=0d1117&title_color=e62429&icon_color=1b3a8c&text_color=ffffff" width="49%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&hide_border=true&background=0d1117&ring=e62429&fire=e62429&currStreakLabel=ffffff&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ffffff&dates=8b949e" width="49%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+  <img src="assets/stats.svg" alt="GitHub stats" width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg" />
+  <img src="assets/languages.svg" alt="Most used languages" width="49%" />
+</picture>
+
+<img src="https://streak-stats.demolab.com/?user=Aman-Thaper&hide_border=true&background=0d1117&ring=ff3b3f&fire=ff3b3f&currStreakLabel=ff3b3f&sideLabels=e6edf3&currStreakNum=e6edf3&sideNums=e6edf3&dates=8b949e&stroke=30363d" width="70%" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Aman-Thaper&bg_color=0d1117&color=e6edf3&line=ff3b3f&point=3b82f6&area=true&area_color=ff3b3f&hide_border=true&custom_title=Swing%20Activity" width="100%" />
 
 </div>
 
----
-
-## 📡 Daily Bugle Contact Line
+## 📡 Signal in the sky
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-1b3a8c?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-Send%20a%20signal-e62429?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-1b3a8c?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB_USERNAME)
+[![GitHub](https://img.shields.io/badge/GitHub-Aman--Thaper-1b3a8c?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aman-Thaper)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-e62429?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-thaper04)
+[![Email](https://img.shields.io/badge/Email-Send%20a%20signal-1b3a8c?style=for-the-badge&logo=gmail&logoColor=white)](mailto:work.aman04@gmail.com)
 
 <br/>
 
-🕸️ *Got a bug that needs catching or a project that needs swinging? Drop me a line.* 🕸️
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1b3a8c,100:e62429&height=120&section=footer" width="100%" />
+*Got a bug that needs catching? Shine the signal.* 🕸️
 
 </div>
+
+<img src="assets/crawler.svg" width="100%" alt="" />
