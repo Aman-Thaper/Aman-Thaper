@@ -23,17 +23,19 @@ USER = os.environ.get("PROFILE_USER", "Aman-Thaper")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OUT = "assets"
 
-# Palette. `accent` is the violet the rest of the profile is built around.
+# Palette: the red/blue the spidey profile is built around.
 THEMES = {
     "light": {
-        "bg": "#ffffff", "border": "#d0d7de", "title": "#7c3aed",
-        "label": "#57606a", "value": "#1f2328", "accent": "#7c3aed",
+        "bg": "#ffffff", "border": "#d0d7de", "title": "#d01f25",
+        "label": "#57606a", "value": "#1f2328", "accent": "#1b3a8c",
         "muted": "#8c959f",
+        "levels": ["#ebedf0", "#ffc9cb", "#ff8a8e", "#f0464b", "#b3141a"],
     },
     "dark": {
-        "bg": "#0d1117", "border": "#30363d", "title": "#8b5cf6",
-        "label": "#8b949e", "value": "#e6edf3", "accent": "#8b5cf6",
+        "bg": "#0d1117", "border": "#30363d", "title": "#ff3b3f",
+        "label": "#8b949e", "value": "#e6edf3", "accent": "#3b82f6",
         "muted": "#6e7681",
+        "levels": ["#161b22", "#4a1418", "#8b1c22", "#c92a30", "#ff3b3f"],
     },
 }
 
@@ -159,7 +161,12 @@ def contributions():
                 streak += 1
             elif i > 0:
                 break
-    return {"total": total, "streak": streak}
+    days = {d: int(lvl) for d, lvl in cells} if cells else {}
+    best = run = 0
+    for d in sorted(days):
+        run = run + 1 if days[d] > 0 else 0
+        best = max(best, run)
+    return {"total": total, "streak": streak, "best": best, "days": days}
 
 
 def shell(width: int, height: int, theme: dict, title: str) -> list[str]:
@@ -195,9 +202,11 @@ def stats_card(data: dict, theme: dict) -> str:
         rows.append(("Contributions (last year)", human(contrib["total"])))
     if contrib.get("streak"):
         rows.append(("Current streak", f"{contrib['streak']} days"))
+    if contrib.get("best"):
+        rows.append(("Longest streak", f"{contrib['best']} days"))
 
     height = 70 + len(rows) * 27
-    parts = shell(440, height, theme, f"{data['name']} — GitHub")
+    parts = shell(440, height, theme, "Patrol report")
     parts.append(
         f'<line x1="25" y1="45" x2="415" y2="45" stroke="{theme["border"]}"/>'
     )
@@ -218,7 +227,7 @@ def languages_card(langs: Counter, theme: dict) -> str:
     top = langs.most_common(6)
     total = sum(langs.values())
     width, height = 440, 200
-    parts = shell(width, height, theme, "Most used languages")
+    parts = shell(width, height, theme, "Web fluid mix")
 
     if not top or total == 0:
         parts.append(
@@ -334,6 +343,64 @@ def tech_card(theme: dict) -> str:
     return "\n".join(parts)
 
 
+def web_card(contrib: dict | None, theme: dict) -> str:
+    """Last year's contributions as a red heatmap, with a spider on patrol."""
+    import sys as _sys
+    from pathlib import Path as _P
+    _sys.path.insert(0, str(_P(__file__).resolve().parents[2] / "scripts"))
+    from spider import spider  # noqa: E402  (shared with the other profile art)
+
+    days = (contrib or {}).get("days") or {}
+    cell, gap, pad, top = 11, 3, 25, 62
+    today = date.today()
+    start = today - timedelta(days=364)
+    start -= timedelta(days=(start.weekday() + 1) % 7)  # back to a Sunday
+    weeks = (today - start).days // 7 + 1
+    width = pad * 2 + weeks * (cell + gap) - gap
+    height = top + 7 * (cell + gap) + 58
+    total = (contrib or {}).get("total")
+    title = "Swing activity" + (f" · {human(total)} contributions this year" if total else "")
+    parts = shell(width, height, theme, title)
+    parts.append(f'<line x1="{pad}" y1="45" x2="{width-pad}" y2="45" stroke="{theme["border"]}"/>')
+
+    month = None
+    for w in range(weeks):
+        for d in range(7):
+            day = start + timedelta(days=w * 7 + d)
+            if day > today:
+                continue
+            x, y = pad + w * (cell + gap), top + d * (cell + gap)
+            lvl = min(4, days.get(day.isoformat(), 0))
+            parts.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" '
+                         f'fill="{theme["levels"][lvl]}"/>')
+        first = start + timedelta(days=w * 7)
+        if first.month != month and w < weeks - 2:
+            month = first.month
+            parts.append(f'<text class="s" x="{pad + w*(cell+gap)}" y="{top + 7*(cell+gap) + 16}" '
+                         f'fill="{theme["muted"]}">{first.strftime("%b")}</text>')
+
+    # the spider wanders the grid, pausing now and then
+    left, right = pad + 6, width - pad - 6
+    mid = top + 3.5 * (cell + gap)
+    path = (f"M{left},{mid} C{left+120},{top} {left+220},{top+90} {left+330},{mid} "
+            f"S{right-200},{top-4} {right},{mid-10} C{right+10},{mid+30} {right-80},{top+92} {right-240},{mid+20} "
+            f"S{left+200},{top+96} {left},{mid} Z")
+    parts.append(f'<path d="{path}" fill="none" stroke="{theme["value"]}" stroke-opacity="0.18" '
+                 f'stroke-dasharray="2 5"/>')
+    parts.append(f'<g><animateMotion dur="26s" repeatCount="indefinite" rotate="auto" path="{path}" '
+                 f'keyPoints="0;0.2;0.24;0.5;0.53;0.8;1" keyTimes="0;0.18;0.3;0.55;0.65;0.85;1"/>'
+                 f'{spider(scuttle=0.3, scale=0.9)}</g>')
+
+    lx = width - pad - 5 * (cell + 3) - 70
+    ly = top + 7 * (cell + gap) + 40
+    parts.append(f'<text class="s" x="{lx}" y="{ly}" fill="{theme["muted"]}">less</text>')
+    for i, col in enumerate(theme["levels"]):
+        parts.append(f'<rect x="{lx + 30 + i*(cell+3)}" y="{ly-10}" width="{cell}" height="{cell}" rx="2.5" fill="{col}"/>')
+    parts.append(f'<text class="s" x="{lx + 30 + 5*(cell+3) + 4}" y="{ly}" fill="{theme["muted"]}">more</text>')
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 def main() -> int:
     data = collect()
     if not data["repos"] and not data["followers"]:
@@ -348,6 +415,7 @@ def main() -> int:
             ("stats", stats_card(data, theme)),
             ("languages", languages_card(data["langs"], theme)),
             ("tech", tech_card(theme)),
+            ("web", web_card(data.get("contrib"), theme)),
         ):
             path = os.path.join(OUT, f"{stem}{tag}.svg")
             with open(path, "w", encoding="utf-8") as fh:
