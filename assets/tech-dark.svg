@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="322" viewBox="0 0 860 322" role="img" aria-label="Tech I build with">
 <style>.t{font:600 16px 'Segoe UI',Ubuntu,Sans-Serif}.l{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif}.v{font:600 13px 'Segoe UI',Ubuntu,Sans-Serif}.s{font:400 11px 'Segoe UI',Ubuntu,Sans-Serif}.p{font:600 12px 'Segoe UI',Ubuntu,Sans-Serif}</style>
 <rect x="0.5" y="0.5" width="859" height="321" rx="10" fill="#0d1117" stroke="#30363d"/>
-<text class="t" x="25" y="33" fill="#8b5cf6">Tech I build with</text>
+<text class="t" x="25" y="33" fill="#ff3b3f">Tech I build with</text>
 <line x1="25" y1="45" x2="835" y2="45" stroke="#30363d"/>
 <text class="s" x="25" y="76" fill="#6e7681" letter-spacing="0.6">LANGUAGES</text>
 <rect x="25" y="98" width="67" height="24" rx="12" fill="#3776AB" stroke="#30363d" stroke-width="0.5"/>
