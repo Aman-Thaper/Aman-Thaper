@@ -1,0 +1,51 @@
+name: Night Patrol (sleep log)
+
+on:
+  # your phone fires this (see SETUP.md)
+  repository_dispatch:
+    types: [sleep]
+  # backup: tap "Run workflow" in the GitHub mobile app
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Hours slept last night (e.g. 6.5)"
+        required: true
+      date:
+        description: "Date YYYY-MM-DD (blank = today, IST)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sleep-log
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Log the night and redraw the card
+        env:
+          HOURS: ${{ github.event.client_payload.hours || inputs.hours }}
+          DAY: ${{ github.event.client_payload.date || inputs.date }}
+        run: |
+          if [ -n "$DAY" ]; then
+            python scripts/sleep_card.py --hours "$HOURS" --date "$DAY"
+          else
+            python scripts/sleep_card.py --hours "$HOURS"
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name "night-patrol[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ assets/sleep.svg
+          git diff --cached --quiet || git commit -m "🕸️ night patrol: logged sleep"
+          git push
