@@ -62,6 +62,9 @@ $ cat /var/log/origin.log
 ![Next.js](https://img.shields.io/badge/Next.js-1b3a8c?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-e62429?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-1b3a8c?style=for-the-badge&logo=fastapi&logoColor=white)
+![Fastify](https://img.shields.io/badge/Fastify-e62429?style=for-the-badge&logo=fastify&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1b3a8c?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-e62429?style=for-the-badge&logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-e62429?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-1b3a8c?style=for-the-badge&logo=git&logoColor=white)
 
@@ -73,36 +76,24 @@ $ cat /var/log/origin.log
 <tr>
 <td width="50%" valign="top">
 
-### 🕸️ Mission: Alpha
-A short description of your coolest project. What it does, why it's awesome.
+### 🐉 [DRACARYS](https://github.com/Aman-Thaper/dracarys)
+**Mission:** hunt vulnerabilities and *prove* them.
 
-`Tech` `Stack` `Here`
+An autonomous DAST scanner that crawls an authorized target, attacks it, and only reports what a deterministic oracle can prove: SQLi, XSS, IDOR, open redirects, leaked secrets. Then it writes the fix, rebuilds the target patched, and replays the original attack to confirm the hole is sealed.
 
-</td>
-<td width="50%" valign="top">
+[![PyPI](https://img.shields.io/badge/pip%20install-dracarys--dast-ff3b3f?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/dracarys-dast/)
 
-### 🕷️ Mission: Beta
-Another project that deserves a spot on the skyline.
-
-`Tech` `Stack` `Here`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🌆 Mission: Gamma
-Something you're proud of, or still building.
-
-`Tech` `Stack` `Here`
+`Python` `FastAPI` `GitHub Action` `VS Code` `MCP`
 
 </td>
 <td width="50%" valign="top">
 
-### 🏗️ Mission: Delta
-The experimental one. Unpolished is fine.
+### 🎟️ [ticket-mng](https://github.com/Aman-Thaper/ticket-mng)
+**Mission:** survive the flash sale.
 
-`Tech` `Stack` `Here`
+An event ticketing backend built for the hard parts: 10-minute seat holds with zero double booking under 200 concurrent requests, payments with webhooks and idempotency keys, live seat maps over WebSockets, and k6 load tests against 3 instances behind Nginx. Ships with zero-downtime deploys.
+
+`TypeScript` `Fastify` `PostgreSQL` `Redis` `BullMQ` `Docker`
 
 </td>
 </tr>
@@ -123,9 +114,12 @@ The experimental one. Unpolished is fine.
   <img src="assets/languages.svg" alt="Most used languages" width="49%" />
 </picture>
 
-<img src="https://streak-stats.demolab.com/?user=Aman-Thaper&hide_border=true&background=0d1117&ring=ff3b3f&fire=ff3b3f&currStreakLabel=ff3b3f&sideLabels=e6edf3&currStreakNum=e6edf3&sideNums=e6edf3&dates=8b949e&stroke=30363d" width="70%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/web-dark.svg" />
+  <img src="assets/web.svg" alt="Contribution heatmap with a spider on patrol" width="100%" />
+</picture>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Aman-Thaper&bg_color=0d1117&color=e6edf3&line=ff3b3f&point=3b82f6&area=true&area_color=ff3b3f&hide_border=true&custom_title=Swing%20Activity" width="100%" />
+<sub>All cards above are drawn by <a href=".github/workflows/cards.yml">a workflow in this repo</a> every day. No outside service, so they never break.</sub>
 
 </div>
 
